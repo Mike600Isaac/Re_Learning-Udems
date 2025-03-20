@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondrian Composition Practice; exercise</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .grid-container {
+            height: 748px;
+            width: 748px;
+            display: grid;
+            gap: 5px;
+            grid-template: 300px 155px 268px 10px / 60px 300px 208px 166px;
+            background-color: black;
+        }
+        .orange {
+            background-color: rgb(228, 103, 1);
+            grid-column: span 2;
+        }
+        .white1 {
+            background-color: #d1cbc3d8;
+            grid-column: span 2;
+        }
+        .white2 {
+            background-color: #d1cbc3d8;
+            grid-column: span 2;
+            border-top: 5px black solid;
+            border-bottom: 5px black solid;
+        }
+        .yellow {
+            background-color: rgb(255, 242, 0);
+            grid-row: span 2;
+        }
+        .white3 {
+            background-color: #d1cbc3d8;
+            grid-row: span 2;
+        }
+        .blue {
+            background-color: #004592;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item orange"></div>
+        <div class="item white1"></div>
+        <div class="item white2"></div>
+        <div class="item white2"></div>
+        <div class="item yellow"></div>
+        <div class="item white3"></div>
+        <div class="item blue"></div>
+        <div class="item white3"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
