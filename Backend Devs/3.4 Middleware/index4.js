@@ -25,8 +25,8 @@ app.get("/", (req, res) => {
 });
 
 app.post('/submit', (req, res) => {
-  // console.log(req.body);
-  res.send(`<h1>${req.body} ✌️</h1>`)
+  console.log(req.body);
+  res.send(`<h1>${req.body["street"]}${req.body["pet"]}✌️</h1>`)
 });
 // app.get('/submit', (req, res) => {
 //   res.send(req.body + "✌️");
