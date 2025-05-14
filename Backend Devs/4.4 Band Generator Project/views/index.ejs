@@ -1,4 +1,4 @@
-<!-- Step 3 Add Header -->
+
 
 
 <!-- Step 2 - If an adjective and noun are sent to this ejs file, 
@@ -6,7 +6,18 @@
     But when the user first goes on the website and there is no adjective and noun, 
     Show the default h1 below -->
 
+<!-- Step 3 Add Header -->
+<%- include("partials/header.ejs") %>
+
 <form action="/submit" method="POST">
+ <% if(locals.nounSend || locals.adjSend) { %>
+  <h1><%= nounSend %> <%= adjSend %></h1>
+ <% } else { %>
+  <h1>Welcome to the Band Generator 🤟</h1>
+ <% } %>
   <input type="submit" value="Generate Name">
+  
 </form>
+
 <!-- Step 3 Add Footer -->
+<%- include("partials/footer.ejs") %>
