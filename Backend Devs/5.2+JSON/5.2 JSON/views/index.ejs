@@ -20,10 +20,10 @@
     <% if (locals.recipe) { %> 
       <h3>Ingredients:</h3>
       <ul id="ingredientsList">
-        <li><%= recipe.protein.name %>, <%= recipe.protein.preparation%>></li>
-        <li><%= recipe.protein.salsa.name %></li>
+        <li><%= recipe.ingredients.protein.name %>, <%= recipe.ingredients.protein.preparation%></li>
+        <li><%= recipe.ingredients.salsa.name %></li>
         
-          <% recipe.ingredient.toppings.forEach((topping) => { %>
+          <% recipe.ingredients.toppings.forEach((topping) => { %>
             <li>
               <%= topping.name %> of <%= topping.quantity %>
             </li>
